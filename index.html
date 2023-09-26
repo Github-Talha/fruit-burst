@@ -1,32 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fruit Brust</title>
-    <!-- daisyui and tailwind css links -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- (lato) google font link  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- fontawesome link -->
-    <script
-      src="https://kit.fontawesome.com/e8b6b52c37.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="en" class="scroll-smooth" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruit Brust</title>
+  <!-- fav icon link  -->
+  <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon" />
+  <!-- daisyui and tailwind css links -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- (lato) google font link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- fontawesome link -->
+  <script src="https://kit.fontawesome.com/e8b6b52c37.js" crossorigin="anonymous"></script>
+  <!-- custom css  -->
+  <!-- <style>
+      .custom-overlay{
+        background:rgba(1, 1, 1, 0.3);
+        border-radius: 10px;
+      }
+    </style> -->
+</head>
+
+<body>
+  <header class="container mx-auto mt-5 mb-40">
+    <nav>
+      <div class="navbar bg-red-500 rounded-full p-3">
+        <div class="navbar-start">
+          <ul class="text-white flex space-x-8 ml-6">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Shop</li>
+            <li>All fruits</li>
+          </ul>
+        </div>
+        <div class="navbar-center">
+          <a>
+            <img src="./images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div class="bg-white p-2 rounded-full mr-6">
+            <input class="pl-2 outline-none" type="text" placeholder="Search here" />
+            <i class="fa-solid fa-magnifying-glass mr-2 opacity-50"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- banner section  -->
+    <section class="mt-8">
+      <div class="carousel w-full relative">
+        <!-- slide 1 -->
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="/images/banner1.png" class="w-full" />
+          <!-- icons  -->
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+          <!-- title , p and btn  -->
+          <div class="absolute transform -translate-y-1/2 top-1/3 -translate-x-1/2 left-1/2">
+            <div class="text-center space-y-3">
+              <h1 class="text-6xl font-bold text-white">
+                Exotic tastes at your doorstep
+              </h1>
+              <p class="text-white">
+                We supply highly quality organic products
+              </p>
+              <button class="text-white btn bg-red-500 border-none">
+                Shop All
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="/images/banner2.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <!-- food modals  -->
+      <div class="absolute transform -translate-x-1/2 left-1/2 bottom-0">
+        <div class="flex space-x-12 p-12 shadow-lg bg-white rounded">
+          <!-- modals 1 -->
+          <div>
+            <img src="./images/fruit1.png" alt="" />
+          </div>
+          <!-- modals 2 -->
+          <div>
+            <img src="./images/fruit2.png" alt="" />
+          </div>
+          <!-- modals 3 -->
+          <div>
+            <img src="./images/fruit3.png" alt="" />
+          </div>
+          <!-- modals 4 -->
+          <div>
+            <img src="./images/fruit4.png" alt="" />
+          </div>
+          <!-- modals 5 -->
+          <div>
+            <img src="./images/fruit5.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <!-- deal of the day and fruit cards  -->
+    <section class="container mx-auto">
+      <!-- deal of the day -->
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <!-- information  -->
+        <div>
+          <h1 class="text-5xl font-bold mb-5">Deal of the day</h1>
+          <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+            <br>
+            Latin
+            literature
+            from 45 BC, making it over 2000 years old.
+          </p>
+        </div>
+        <!-- clock  -->
+        <div class="flex items-center space-x-8">
+          <div class="text-center">
+            <p class="text-5xl font-bold">29</p>
+            <p>Days</p>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl font-bold">15</p>
+            <p>Hours</p>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl font-bold">25</p>
+            <p>Minutes</p>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl font-bold">08</p>
+            <p>Seconds</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
 </html>
