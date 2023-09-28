@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" data-theme="light">
+<html id="home" lang="en" class="scroll-smooth" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -26,32 +26,49 @@
 </head>
 
 <body>
-  <header class="container mx-auto mt-5 mb-40">
+  <header class="container mx-auto mt-5">
     <nav>
-      <div class="navbar bg-red-500 rounded-full p-3">
+      <div class="navbar bg-red-500 rounded-full p-3 relative">
         <div class="navbar-start">
-          <ul class="text-white flex space-x-8 ml-6">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Shop</li>
-            <li>All fruits</li>
-          </ul>
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <!-- tabindex="0"
+              class="menu menu-sm dropdown-content z-[1] shadow bg-base-100 rounded-box p-2 text-black md:space-x-8 ml-6 -->
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Shop</li>
+              <li>All fruits</li>
+            </ul>
+          </div>
         </div>
-        <div class="navbar-center">
+        <ul class="absolute ml-7 text-white space-x-6 hidden lg:inline-flex">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Shop</li>
+          <li>All fruits</li>
+        </ul>
+        <div class="navbar-center mr-3 md:mr-0 lg:mr-0">
           <a>
             <img src="./images/logo.png" alt="" />
           </a>
         </div>
         <div class="navbar-end">
-          <div class="bg-white p-2 rounded-full mr-6">
-            <input class="pl-2 outline-none" type="text" placeholder="Search here" />
-            <i class="fa-solid fa-magnifying-glass mr-2 opacity-50"></i>
+          <div class="hidden md:inline lg:inline">
+            <div class="bg-white p-2 rounded-full mr-6">
+              <input class="pl-2 outline-none" type="text" placeholder="Search here" />
+              <i class="fa-solid fa-magnifying-glass mr-2 opacity-50"></i>
+            </div>
           </div>
         </div>
       </div>
     </nav>
     <!-- banner section  -->
-    <section class="mt-8">
+    <section id="all-fruits" class="mt-8">
       <div class="carousel w-full relative">
         <!-- slide 1 -->
         <div id="slide1" class="carousel-item relative w-full">
@@ -62,15 +79,15 @@
             <a href="#slide2" class="btn btn-circle">❯</a>
           </div>
           <!-- title , p and btn  -->
-          <div class="absolute transform -translate-y-1/2 top-1/3 -translate-x-1/2 left-1/2">
-            <div class="text-center space-y-3">
-              <h1 class="text-6xl font-bold text-white">
+          <div class="absolute transform -translate-y-1/2 top-1/2 md:top-1/2 lg:top-1/3 -translate-x-1/2 left-1/2">
+            <div class="text-center space-y-0 md:space-y-3 lg:space-y-3">
+              <h1 class="text-2xl md:text-6xl lg:text-6xl font-bold text-white">
                 Exotic tastes at your doorstep
               </h1>
               <p class="text-white">
                 We supply highly quality organic products
               </p>
-              <button class="text-white btn bg-red-500 border-none">
+              <button class="text-white btn bg-red-500 border-none ">
                 Shop All
               </button>
             </div>
@@ -85,7 +102,8 @@
         </div>
       </div>
       <!-- food modals  -->
-      <div class="absolute transform -translate-x-1/2 left-1/2 bottom-0">
+      <div
+        class="absolute transform -translate-x-1/2 left-1/2 bottom-10 hidden md:inline lg:inline">
         <div class="flex space-x-12 p-12 shadow-lg bg-white rounded">
           <!-- modals 1 -->
           <div>
@@ -111,15 +129,17 @@
       </div>
     </section>
   </header>
-  <main>
+  <main class="mt-28">
     <!-- deal of the day and fruit cards  -->
-    <section class="container mx-auto">
+    <section id="shop" class="container mx-auto">
       <!-- deal of the day -->
       <div class="flex flex-col md:flex-row justify-between items-center">
         <!-- information  -->
         <div>
-          <h1 class="text-5xl font-bold mb-5">Deal of the day</h1>
-          <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+          <h1 class="text-3xl md:text-5xl lg:text-5xl font-bold mb-5 text-center md:text-left lg:text-left">Deal of the
+            day</h1>
+          <p class="text-center md:text-left lg:text-left">Contrary to popular belief, is not simply random text. It has
+            roots in a piece of classical
             <br>
             Latin
             literature
@@ -129,19 +149,19 @@
         <!-- clock  -->
         <div class="flex items-center space-x-8">
           <div class="text-center">
-            <p class="text-5xl font-bold">29</p>
+            <p class="text-3xl md:text-5xl lg:text-5xl font-bold">29</p>
             <p>Days</p>
           </div>
           <div class="text-center">
-            <p class="text-5xl font-bold">15</p>
+            <p class="text-3xl md:text-5xl lg:text-5xl font-bold">15</p>
             <p>Hours</p>
           </div>
           <div class="text-center">
-            <p class="text-5xl font-bold">25</p>
+            <p class="text-3xl md:text-5xl lg:text-5xl font-bold">25</p>
             <p>Minutes</p>
           </div>
           <div class="text-center">
-            <p class="text-5xl font-bold">08</p>
+            <p class="text-3xl md:text-5xl lg:text-5xl font-bold">08</p>
             <p>Seconds</p>
           </div>
         </div>
@@ -150,7 +170,7 @@
     <!-- fruit selling cards  -->
     <section class="container mx-auto my-12">
       <!-- cards  -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <!-- card 1 -->
         <div class="border rounded-lg flex flex-col items-center p-6 space-y-3">
           <img src="./images/fruit6.png" alt="">
@@ -372,7 +392,7 @@
       </div>
     </section>
     <!-- team section  -->
-    <section class="container mx-auto">
+    <section id="support" class="container mx-auto">
       <!-- team container  -->
       <div class="bg-[url('./images/team.png')] bg-cover bg-center space-y-8 rounded">
         <!-- information about team  -->
@@ -459,15 +479,15 @@
       </div>
     </section>
     <!-- why chose us section  -->
-    <section class="container mx-auto">
+    <section id="about-us" class="container mx-auto">
       <!-- heading -->
       <div class="text-center pt-24 mb-12">
-        <h3 class="text-5xl font-bold mb-4">Meet the team section</h3>
+        <h3 class="text-5xl font-bold mb-4">Why Choose Us</h3>
         <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin
           literature from 45 BC, making it over 2000 years old.</p>
       </div>
       <!-- why chose us box and card  -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
         <!-- left box  -->
         <div class="flex flex-col justify-between">
           <!-- first box in left box  -->
@@ -480,7 +500,7 @@
             <div>
               <h3 class="text-2xl font-bold">Dedicated Team</h3>
               <hr class=" mb-2">
-              <p >Professional employees are there for you to pick the most amazing and fresh fruits</p>
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits</p>
             </div>
           </div>
           <!-- second box in left box  -->
@@ -554,7 +574,31 @@
       </div>
     </section>
   </main>
-  <footer></footer>
+  <!-- footer section  -->
+  <footer class="footer footer-center py-24 bg-black mt-20">
+    <aside class="space-y-5">
+      <img src="./images/logo.png" alt="">
+      <!-- links  -->
+      <div class="text-white md:space-x-10 lg:space-x-10 grid grid-cols-2 md:grid-cols-4 md:grid-cols-6 gap-4">
+        <a href="#home">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#shop">Shop</a>
+        <a href="#all-fruits">All Fruits</a>
+        <a href="#support">Support</a>
+        <a href="#my-account">My Account</a>
+      </div>
+    </aside>
+    <nav>
+      <div
+        class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 text-white text-3xl gap-3 lg:gap-0 md:space-x-5 lg:space-x-5">
+        <a><i class="fa-brands fa-x-twitter"></i></a>
+        <a><i class="fa-brands fa-facebook"></i></a>
+        <a><i class="fa-brands fa-youtube"></i></a>
+        <a><i class="fa-brands fa-linkedin"></i></a>
+        <a><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </nav>
+  </footer>
 </body>
 
 </html>
